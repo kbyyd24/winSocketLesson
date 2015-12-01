@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7D000E8F-AB43-48EC-976B-C9E23DB3EBD1}</ProjectGuid>
+    <ProjectGuid>{1DE43F81-D51D-46C9-8E2C-8CA26CA65DE5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>threadControl</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
