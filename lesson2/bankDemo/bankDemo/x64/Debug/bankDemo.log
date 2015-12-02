@@ -1,0 +1,14 @@
+﻿生成启动时间为 2015/12/2 16:55:49。
+     1>项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\bankDemo\bankDemo\bankDemo.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"x64\Debug\bankDemo.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt bankDemo.cpp
+         bankDemo.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\bankDemo\x64\Debug\bankDemo.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\bankDemo\x64\Debug\bankDemo.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\bankDemo\x64\Debug\bankDemo.lib" /MACHINE:X64 x64\Debug\bankDemo.obj
+         x64\Debug\stdafx.obj
+         bankDemo.vcxproj -> C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\bankDemo\x64\Debug\bankDemo.exe
+     1>已完成生成项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\bankDemo\bankDemo\bankDemo.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:02.59

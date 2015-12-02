@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-int tickets = 10;
+int tickets = 20;
 HANDLE evFin;
 CRITICAL_SECTION cs;
 
@@ -15,7 +15,7 @@ DWORD WINAPI thProc1(LPVOID param) {
 		EnterCriticalSection(&cs);
 		if (tickets > 0) {
 			tickets--;
-			cout << "thread one sell one ticket\nyou have " << tickets << " tickets now.\n";
+			cout << "thread one sell one ticket, you have " << tickets << " tickets now.\n";
 		}
 		else {
 			cout << "no enough ticket 1\n";
@@ -26,7 +26,6 @@ DWORD WINAPI thProc1(LPVOID param) {
 		}
 		LeaveCriticalSection(&cs);
 		Sleep(1);
-		//SetEvent(evFin);
 	}
 	return 0;
 }
@@ -36,7 +35,7 @@ DWORD WINAPI thProc2(LPVOID param) {
 		EnterCriticalSection(&cs);
 		if (tickets > 0) {
 			tickets--;
-			cout << "thread two sell one ticket\nyou have " << tickets << " tickets now.\n";
+			cout << "thread two sell one ticket, you have " << tickets << " tickets now.\n";
 		}
 		else {
 			cout << "no enough ticket 2\n";
