@@ -32,10 +32,11 @@ int main(int argc, char* argv[])
 	char command = NULL;
 	DWORD thA = 0, thB = 0, thC = 0;
 	bool flag = true;
+	HANDLE hd[3];
 
-	HANDLE hdA = CreateThread(NULL, 0, funcA, NULL, CREATE_SUSPENDED, &thA);
-	HANDLE hdB = CreateThread(NULL, 0, funcB, NULL, CREATE_SUSPENDED, &thB);
-	HANDLE hdC = CreateThread(NULL, 0, funcC, NULL, CREATE_SUSPENDED, &thC);
+	hd[0] = CreateThread(NULL, 0, funcA, NULL, CREATE_SUSPENDED, &thA);
+	hd[1] = CreateThread(NULL, 0, funcB, NULL, CREATE_SUSPENDED, &thB);
+	hd[2] = CreateThread(NULL, 0, funcC, NULL, CREATE_SUSPENDED, &thC);
 
 	cout << "---------------------------------------\n";
 	cout << "please input command.\nr: resume all threads\ns : suspend all threads\nt : terminate all threads\nq : quit main process\nh : help\n";
@@ -46,19 +47,19 @@ int main(int argc, char* argv[])
 		switch (command)
 		{
 		case 'r':
-			ResumeThread(hdA);
-			ResumeThread(hdB);
-			ResumeThread(hdC);
+			ResumeThread(hd[0]);
+			ResumeThread(hd[1]);
+			ResumeThread(hd[2]);
 			break;
 		case 's':
-			SuspendThread(hdA);
-			SuspendThread(hdB);
-			SuspendThread(hdC);
+			SuspendThread(hd[0]);
+			SuspendThread(hd[1]);
+			SuspendThread(hd[2]);
 			break;
 		case 't':
-			TerminateThread(hdB, 1);
-			TerminateThread(hdC, 1);
-			TerminateThread(hdA, 1);
+			TerminateThread(hd[1], 1);
+			TerminateThread(hd[2], 1);
+			TerminateThread(hd[0], 1);
 			break;
 		case 'q':
 			flag = false;

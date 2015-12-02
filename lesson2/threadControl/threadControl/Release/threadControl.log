@@ -1,19 +1,19 @@
-﻿生成启动时间为 2015/12/1 22:38:47。
+﻿生成启动时间为 2015/12/2 8:57:00。
      1>项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\threadControl\threadControl\threadControl.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Release\threadControl.pch" /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Release\threadControl.pch" /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt threadControl.cpp
          threadControl.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\threadControl\Release\threadControl.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\threadControl\Release\threadControl.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\threadControl\Release\threadControl.lib" /MACHINE:X86 /SAFESEH Release\stdafx.obj
          Release\threadControl.obj
          正在生成代码
-         All 20 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         1 of 20 functions ( 5.0%) were compiled, the rest were copied from previous compilation.
+           0 functions were new in current compilation
+           0 functions had inline decision re-evaluated but remain unchanged
          已完成代码的生成
          threadControl.vcxproj -> C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\threadControl\Release\threadControl.exe
      1>已完成生成项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson2\threadControl\threadControl\threadControl.vcxproj”(Build 个目标)的操作。
 
 已成功生成。
 
-已用时间 00:00:03.99
+已用时间 00:00:07.47
