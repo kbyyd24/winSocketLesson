@@ -32,16 +32,38 @@ int _tmain(int argc, _TCHAR* argv[])
         return -1;   
     }
 	printf("create socket\n");
+	// 设置套接字为非阻塞模式
+	int iMode = 1;
+	retVal = ioctlsocket(sHost, FIONBIO, (u_long FAR*) &iMode);
+	if (retVal == SOCKET_ERROR)
+	{
+		printf("ioctlsocket failed !\n");
+		WSACleanup();
+		return -1;
+	}
     // 设置服务器地址   
     servAddr.sin_family = AF_INET;   
     servAddr.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");		// 用户需要根据实际情况修改
     servAddr.sin_port = htons(10000);													// 在实际应用中，建议将服务器的IP地址和端口号保存在配置文件中
     int sServerAddlen = sizeof(servAddr);												// 计算地址的长度       
     // 连接服务器   
-    retVal = connect(sHost,(LPSOCKADDR)&servAddr,sizeof(servAddr));   
-	if (SOCKET_ERROR == retVal) {
-		printf("connect failed!\n");
-		return -1;
+	while (true) {
+		retVal = connect(sHost, (LPSOCKADDR)&servAddr, sizeof(servAddr));
+		if (SOCKET_ERROR == retVal) {
+			int err = WSAGetLastError();
+			if (WSAEWOULDBLOCK == err || WSAEINVAL == err) {
+				continue;
+			}
+			else if (err == WSAEISCONN) {
+				break;
+			}
+			else {
+				printf("connect failed!\n");
+				closesocket(sHost);
+				WSACleanup();
+				return -1;
+			}
+		}
 	}
 	printf("connection establishment\n");
 	// 循环等待
@@ -63,7 +85,6 @@ int _tmain(int argc, _TCHAR* argv[])
 				return -1;   
 			}
 		}
-		printf("");
 		break;
 	}  
 	
