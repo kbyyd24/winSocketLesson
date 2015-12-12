@@ -98,7 +98,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		std::string str;
 		std::getline(std::cin, str);
 		// 将用户输入的数据复制到buf中
-		ZeroMemory(buf,BUF_SIZE);   
+		ZeroMemory(buf,BUF_SIZE); 
 		strcpy(buf,str.c_str());   
 		// 向服务器发送数据
 		retVal = send(sHost,buf,strlen(buf),0);   
@@ -109,17 +109,28 @@ int _tmain(int argc, _TCHAR* argv[])
 			WSACleanup();   
 			return -1;   
 		}   	  
-		// 接收服务器回传的数据   
-		retVal = recv(sHost,buf,sizeof(buf)+1,0);   
+		// 接收服务器回传的数据
+		Sleep(10);
+		ZeroMemory(buf, BUF_SIZE);
+		retVal = recv(sHost,buf,sizeof(buf)+1,0);
+		if (SOCKET_ERROR == retVal) {
+			int err = WSAGetLastError();
+			if (WSAEWOULDBLOCK == err) {
+				continue;
+			}
+			else if (err == WSAETIMEDOUT || err == WSAENETDOWN) {
+				printf("recv failed!\n");
+				closesocket(sHost);
+				WSACleanup();
+				return -1;
+			}
+			break;
+		}
 		printf("Recv From Server: %s\n",buf);   
 		// 如果收到logout，则退出
 		if(strcmp(buf, "logout") == 0)
 		{
 			printf("logout!\n");
-			break;
-		}
-		else if (strcmp(buf, "exit") == 0) {
-			printf("exit!\n");
 			break;
 		}
 	}

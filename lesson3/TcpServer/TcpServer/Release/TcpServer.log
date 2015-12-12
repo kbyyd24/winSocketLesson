@@ -1,22 +1,22 @@
-﻿生成启动时间为 2015/12/9 11:06:58。
+﻿生成启动时间为 2015/12/12 14:05:39。
      1>项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson3\TcpServer\TcpServer\TcpServer.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Release\TcpServer.pch" /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt TcpServer.cpp
          TcpServer.cpp
      1>TcpServer.cpp(18): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
          C:\Program Files (x86)\Windows Kits\8.1\Include\um\WINSOCK2.H(1868): note: 参见“inet_ntoa”的声明
-     1>TcpServer.cpp(44): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>TcpServer.cpp(36): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-     1>TcpServer.cpp(46): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+     1>TcpServer.cpp(48): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+     1>TcpServer.cpp(50): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
          C:\Program Files (x86)\Windows Kits\8.1\Include\um\WINSOCK2.H(1868): note: 参见“inet_ntoa”的声明
-     1>TcpServer.cpp(54): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-     1>TcpServer.cpp(74): warning C4101: “buf”: 未引用的局部变量
+     1>TcpServer.cpp(76): warning C4101: “buf”: 未引用的局部变量
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson3\TcpServer\Release\TcpServer.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson3\TcpServer\Release\TcpServer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson3\TcpServer\Release\TcpServer.lib" /MACHINE:X86 /SAFESEH Release\stdafx.obj
          Release\TcpServer.obj
          正在生成代码
-     1>c:\users\kbyyd\desktop\windows网络编程\mycode\lesson3\tcpserver\tcpserver\tcpserver.cpp(66): warning C4715: “connectThread”: 不是所有的控件路径都返回值
+     1>c:\users\kbyyd\desktop\windows网络编程\mycode\lesson3\tcpserver\tcpserver\tcpserver.cpp(68): warning C4715: “connectThread”: 不是所有的控件路径都返回值
          2 of 9 functions (22.2%) were compiled, the rest were copied from previous compilation.
            0 functions were new in current compilation
            0 functions had inline decision re-evaluated but remain unchanged
@@ -26,4 +26,4 @@
 
 已成功生成。
 
-已用时间 00:00:02.91
+已用时间 00:00:02.43

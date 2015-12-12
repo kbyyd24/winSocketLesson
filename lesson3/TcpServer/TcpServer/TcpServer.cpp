@@ -23,11 +23,34 @@ DWORD WINAPI connectThread(LPVOID param) {
 	while (true)
 	{
 		ZeroMemory(buf, BUF_SIZE);						// 清空接收数据的缓冲区
-		retVal = recv(sClient, buf, BUFSIZ, 0);				// 
-
-															//客户端强制关闭，这样服务器不会关闭
-		if (SOCKET_ERROR == retVal)
+		retVal = recv(sClient, buf, BUFSIZ, 0);
+		if (SOCKET_ERROR != retVal)
 		{
+			// 如果客户端发送logout字符串，则客户端退出
+			if (strcmp(buf, "logout") == 0)
+			{
+				retVal = send(sClient, "logout", strlen("logout"), 0);
+				break;
+			}	
+			char    msg[BUF_SIZE];
+			sprintf(msg, "Message received - %s", buf);
+			retVal = send(sClient, msg, strlen(msg), 0);
+			if (SOCKET_ERROR == retVal)
+			{
+				printf("send failed !\n");
+				closesocket(sClient);
+				return -1;
+			}
+			// 获取当前系统时间
+			SYSTEMTIME st;
+			GetLocalTime(&st);
+			char sDateTime[30];
+			sprintf(sDateTime, "%4d-%2d-%2d %2d:%2d:%2d", st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond);
+			// 打印输出的信息
+			printf("%s, Recv From Client [%s:%d] :%s\n", sDateTime, inet_ntoa(addrClient.sin_addr), clientPort, buf);
+			
+		}
+		else {
 			int err = WSAGetLastError();
 			if (err == WSAEWOULDBLOCK)
 				continue;
@@ -37,28 +60,7 @@ DWORD WINAPI connectThread(LPVOID param) {
 				break;
 			}
 		}
-		// 获取当前系统时间
-		SYSTEMTIME st;
-		GetLocalTime(&st);
-		char sDateTime[30];
-		sprintf(sDateTime, "%4d-%2d-%2d %2d:%2d:%2d", st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond);
-		// 打印输出的信息
-		printf("%s, Recv From Client [%s:%d] :%s\n", sDateTime, inet_ntoa(addrClient.sin_addr), clientPort, buf);
-		// 如果客户端发送logout字符串，则客户端退出
-		if (strcmp(buf, "logout") == 0)
-		{
-			retVal = send(sClient, "logout", strlen("logout"), 0);
-			break;
-		}
-		char    msg[BUF_SIZE];
-		sprintf(msg, "Message received - %s", buf);
-		retVal = send(sClient, msg, strlen(msg), 0);
-		if (SOCKET_ERROR == retVal)
-		{
-			printf("send failed !\n");
-			closesocket(sClient);
-			return -1;
-		}
+		
 	}
 	// 释放套接字   
 	printf("release connection\n");

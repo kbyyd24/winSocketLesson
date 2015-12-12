@@ -1,4 +1,4 @@
-﻿生成启动时间为 2015/12/9 22:36:07。
+﻿生成启动时间为 2015/12/12 14:05:30。
      1>项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson3\TcpClient\TcpClient\TcpClient.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Release\TcpClient.pch" /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt TcpClient.cpp
@@ -20,4 +20,4 @@
 
 已成功生成。
 
-已用时间 00:00:05.36
+已用时间 00:00:02.62
