@@ -1,0 +1,25 @@
+﻿生成启动时间为 2016/1/6 21:11:58。
+     1>项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\homework\my_ping\my_ping\my_ping.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\my_ping.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt my_ping.cpp
+         my_ping.cpp
+     1>c:\users\kbyyd\desktop\windows网络编程\mycode\homework\my_ping\my_ping\my_ping.cpp(163): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+         c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2238): note: 参见“gethostbyname”的声明
+     1>c:\users\kbyyd\desktop\windows网络编程\mycode\homework\my_ping\my_ping\my_ping.cpp(165): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+         c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1850): note: 参见“inet_addr”的声明
+     1>c:\users\kbyyd\desktop\windows网络编程\mycode\homework\my_ping\my_ping\my_ping.cpp(180): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+         c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1868): note: 参见“inet_ntoa”的声明
+     1>c:\users\kbyyd\desktop\windows网络编程\mycode\homework\my_ping\my_ping\my_ping.cpp(271): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type '_TCHAR *'
+         c:\users\kbyyd\desktop\windows网络编程\mycode\homework\my_ping\my_ping\my_ping.cpp(271): note: consider using '%ls' in the format string
+         c:\users\kbyyd\desktop\windows网络编程\mycode\homework\my_ping\my_ping\my_ping.cpp(271): note: consider using '%lls' in the format string
+         c:\users\kbyyd\desktop\windows网络编程\mycode\homework\my_ping\my_ping\my_ping.cpp(271): note: consider using '%Ls' in the format string
+         c:\users\kbyyd\desktop\windows网络编程\mycode\homework\my_ping\my_ping\my_ping.cpp(271): note: consider using '%ws' in the format string
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\homework\my_ping\Debug\my_ping.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='requireAdministrator' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\homework\my_ping\Debug\my_ping.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\homework\my_ping\Debug\my_ping.lib" /MACHINE:X86 Debug\my_ping.obj
+         Debug\stdafx.obj
+         my_ping.vcxproj -> C:\Users\kbyyd\Desktop\windows网络编程\myCode\homework\my_ping\Debug\my_ping.exe
+     1>已完成生成项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\homework\my_ping\my_ping\my_ping.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:05.49
