@@ -1,9 +1,19 @@
-﻿生成启动时间为 2015/12/30 22:20:06。
+﻿生成启动时间为 2016/1/7 19:20:12。
      1>项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson6\Client\Client\Client.vcxproj”在节点 2 上(Build 个目标)。
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Client.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Client.cpp
+         Client.cpp
+     1>c:\users\kbyyd\desktop\windows网络编程\mycode\lesson6\client\client\client.cpp(154): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+         c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1850): note: 参见“inet_addr”的声明
+     1>c:\users\kbyyd\desktop\windows网络编程\mycode\lesson6\client\client\client.cpp(158): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+     1>c:\users\kbyyd\desktop\windows网络编程\mycode\lesson6\client\client\client.cpp(144): warning C4101: “iResult”: 未引用的局部变量
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson6\Client\Debug\Client.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson6\Client\Debug\Client.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson6\Client\Debug\Client.lib" /MACHINE:X86 Debug\Client.obj
+         Debug\stdafx.obj
          Client.vcxproj -> C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson6\Client\Debug\Client.exe
      1>已完成生成项目“C:\Users\kbyyd\Desktop\windows网络编程\myCode\lesson6\Client\Client\Client.vcxproj”(Build 个目标)的操作。
 
 已成功生成。
 
-已用时间 00:00:00.22
+已用时间 00:00:04.39
