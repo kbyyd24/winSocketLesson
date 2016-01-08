@@ -257,6 +257,24 @@ void TcharToChar(const TCHAR * tchar, char * _char)
 	WideCharToMultiByte(CP_ACP, 0, tchar, -1, _char, iLength, NULL, NULL);
 }
 
+/*
+judge the parameter is or is not a IP address
+*/
+bool isIp(char *ipaddr)
+{
+	char *pnum, *pdot = ipaddr;
+	for (; *ipaddr; ipaddr = pdot++)
+	{
+		int t = 0, e = 1;
+		if (*(pnum = pdot) == '.')return 0;
+		for (; *pdot != '.'&&*pdot; ++pdot);
+		for (ipaddr = pdot - 1; ipaddr >= pnum; t += e*(*ipaddr-- - '0'), e *= 10);
+		if (t<0 || t>255 || (pdot - pnum == 3 && t<100) || (pdot - pnum == 2 && t<10))
+			return false;
+	}
+	return true;
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	if (argc != 2) {
@@ -265,6 +283,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 	char iptemp[16];
 	TcharToChar(argv[1], iptemp);
+	if (!isIp(iptemp)) {
+		printf("the parameter is not a IP address\n");
+		return -2;
+	}
 	printf("ping %ws...\n", argv[1]);
 	int ret = ping(iptemp, 500);
 	if (ret >= 0) {
